@@ -1,0 +1,151 @@
+body{
+    margin:0;
+    background-color: rgb(230, 250, 245);
+    height: 100vh;
+}
+header{
+    margin-top:-15px;
+    padding-top: 0px;
+    display:flex;
+    justify-content: space-between;
+}
+#left{
+    margin-left: 73px;
+    font-family: 'Qwigley', cursive;
+    font-weight: 580;
+    font-size: 40px;
+    color: rgb(8,76,97);
+    transform-origin: center;
+    animation: sigRot 2s 1 ease both;
+}
+@keyframes sigRot{
+    0%{transform: rotateY(0deg);}
+    100%{transform: rotateY(360deg);}
+}
+#right{
+    display: flex;
+   align-items: center;
+   animation: comDwn 2s 1 ease both;
+}
+@keyframes comDwn{
+    0%{transform: translateY(-18px);}
+    100%{transform: translateY(0px);}
+}
+#right a{
+    text-decoration: none;
+   color: rgb(8,76,97);
+   padding: 17px 18px;
+   font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+#right a:last-of-type{
+    margin-right: 83px;
+}
+#right a:hover{
+background-color:rgb(155, 238, 216);
+}
+#right a:focus{
+font-weight: bold;
+}
+main{
+    display: flex;
+    animation: cmUp 2s 1 ease both;
+}
+@keyframes cmUp{
+    0%{transform: translateY(80px);}
+    100%{transform: translateY(0px);}
+}
+#sec1{
+    padding-left: 69px;
+    width: 40%;
+}
+#bycof{
+    border-radius: 6px;
+    padding: 9px 30px;
+    background-color:rgb(8,76,97);
+    border: 1px solid rgb(8,76,97);
+    outline:none;
+    font-size: larger;
+    font-weight: 500;
+    color: white;
+    font-family: Google Sans Regular;
+    letter-spacing: 1.9px;
+    word-spacing: 1px;
+}
+#bycof:hover{
+    cursor: pointer;
+    background:none;
+    border: 1px solid rgb(8,76,97);
+    color:rgb(8,76,97);
+    font-size: larger;
+    font-weight: 400;
+    
+}
+.icons{
+    border-radius:50%;
+    outline: none;
+    border: none;
+    padding: 8px 11px;
+    font-size: 22px;
+    margin: 22px 5px;
+    color: white;
+}
+
+.icons:first-of-type{
+    background-color: black;
+}
+
+.icons:nth-of-type(2){
+    background-color: rgb(31, 177, 226);
+}
+.icons:nth-of-type(3){
+    background-color: rgb(236, 160, 18);
+}
+.icons:nth-of-type(4){
+    background-color: rgb(219, 86, 108);
+}
+.icons:hover{
+    cursor: pointer;
+    background-color:rgb(8,76,97);
+    color: white;
+}
+
+#yo{
+    color: rgb(8,76,97);
+    font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 26px;
+    font-weight:500;
+    margin-bottom: 0;
+}
+#ThInstrct{
+    color: rgb(8,76,97);
+    font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+   font-size: 16px;
+   font-weight: 600;
+   margin-top: 0;
+   letter-spacing: 1.1;
+}
+#sec1 h1{
+    color: rgb(8,76,97);
+    font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    letter-spacing: 1.5;
+    font-size: 50px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+#sec1 h3{
+    color: rgb(8,76,97);
+    font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 26px;
+   margin-top: 3px;
+   font-weight: 500;
+}
+#des{
+    color: rgb(8,76,97);
+    font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size:21px;
+    font-weight: 500;
+   line-height: 36px;
+   opacity: 0.5;
+    
+}

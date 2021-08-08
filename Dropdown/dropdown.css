@@ -1,0 +1,65 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    height:100vh;
+    background-color: rgb(139,62,85);
+    font-family: "Poppins",sans-serif;
+}
+a,button{
+    font-family: "Poppins",sans-serif;
+    margin-top: 20px;
+}
+.dropdown{
+    height:10vh;
+    background: white;
+    background-color: rgb(211, 95, 130);
+    display:flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+.projects ul,.products ul{
+    background: white;
+    list-style: none;
+    margin-top: 10px;
+    width:200px;
+    height:200px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius:5px;
+    opacity:0;
+    transition: all 0.4s ease;
+    pointer-events: none;
+    transform:translate(-10px);
+}
+a{
+    color:black;
+    text-decoration: none;
+}
+button,.home{
+    color:white;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor:pointer;
+}
+button:hover,.home:hover{
+    color: lightgray;
+}
+.projects li,.products li{
+    display: flex;
+    padding:0px 15px;
+    width:100%;
+    height:100%;
+}
+.projects li:hover,.products li:hover{
+background-color: rgb(248, 183, 203);
+}
+button:focus+ul{
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(10px);
+}

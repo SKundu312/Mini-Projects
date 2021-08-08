@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/4f6fdaa8f3.js" crossorigin="anonymous"></script>
+    <title>Clock</title>
+    <style>
+        *{
+            margin:0;
+            font-family:consolas;
+        }
+        .moon{
+            color:white;
+            position: absolute;
+            top:8%;
+            right:6%;
+            border-radius: 50%;
+            font-size: 22px;
+        }
+        .sun{
+            display: none;
+            position: absolute;
+            top:8%;
+            right:6%;
+            border-radius: 50%;
+            font-size: 22px;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            background: #040615;
+        }
+        .clock{
+            width: 350px;
+            height:350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            border:8px solid white;
+            
+        }
+        .clock::before{
+            content: '';
+            position: absolute;
+            width:15px;
+            height:15px;
+            background: #2196f3;
+            border-radius: 50%;
+            z-index: 1000;
+        }
+        .hour,.min,.sec{
+            position: absolute;
+        }
+        .hour,.hr{
+            width:200px;
+            height:200px;
+        }
+        .min,.mn{
+            width:230px;
+            height:230px;
+        }
+        .sec,.sc{
+            width:250px;
+            height:250px;
+        }
+        .hr, .mn, .sc{
+            display:flex;
+            justify-content: center;
+            position: absolute;
+        }
+        .hr::before{
+            content: '';
+            position:absolute;
+            width:8px;
+            height:100px;
+            background:white;
+        }
+        .mn::before{
+            content: '';
+            position:absolute;
+            width:4px;
+            height:110px;
+            background:white;
+        }
+        .sc::before{
+            content: '';
+            position:absolute;
+            width:2px;
+            height:120px;
+            background:#2196f3;
+        }
+        #digClck{
+            display: flex;
+            color: white;
+            font-size: 4em;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <div class="hour">
+            <div class="hr" id="hr"></div>
+        </div>
+        <div class="min">
+            <div class="mn" id="mn"></div>
+        </div>
+        <div class="sec">
+            <div class="sc" id="sc"></div>
+        </div>
+    </div>
+    <div id="digClck">
+      <div id="hour"></div>
+      <div id="minute"></div>
+      <div id="seconds"></div>
+      <div id="ampm"></div>
+    </div>
+    <div class="theme">
+        <i class="fas fa-moon moon"></i>
+        <i class="fas fa-sun sun"></i>
+
+    </div>
+    <script>
+     var hr=document.querySelector("#hr");
+     var mn=document.querySelector("#mn");
+     var sc=document.querySelector("#sc");
+     
+     setInterval(()=>{
+     let date=new Date();
+     let hh=date.getHours()*30;
+     let mm=date.getMinutes()*6;
+     let ss=date.getSeconds()*6;
+     
+     
+     hr.style.transform=`rotateZ(${hh+(mm/12)}deg)`;
+     mn.style.transform=`rotateZ(${mm}deg)`;
+     sc.style.transform=`rotateZ(${ss}deg)`;
+
+     var hour=document.querySelector("#hour");
+     var minutes=document.querySelector("#minutes");
+     var seconds=document.querySelector("#seconds");
+     var ampm=document.querySelector("#ampm");
+     
+    
+     var h=date.getHours();
+     var m=date.getMinutes();
+     var s=date.getSeconds();
+     var ampm1="AM";
+     
+     if(h>12){
+         h=h-12;
+         ampm1="PM";
+     }
+     h=(h<10)?"0"+h:h;
+     m=(m<10)?"0"+m:m;
+     s=(s<10)?"0"+s:s;
+     hour.innerHTML=h+":";
+     minute.innerHTML=m+":";
+     seconds.innerHTML=s+"&nbsp";
+     ampm.innerHTML=ampm1;
+     })
+     var btn=document.querySelector(".theme")
+     btn.addEventListener('click',function(e){
+        
+     })
+    </script>
+</body>
+</html>

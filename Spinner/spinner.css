@@ -1,0 +1,13 @@
+#circle{
+    color:lightgreen;
+   font-size: 90px;
+   height:50%;
+   width: 0%;
+   margin: 100px 100px;
+   animation: spinner 0.7s linear infinite;
+}
+@keyframes spinner {
+    to{
+        transform: rotate(360deg);
+    }
+}

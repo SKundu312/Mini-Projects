@@ -1,0 +1,33 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    width:100%;
+    height:100%;  
+}
+#rightWheel,#leftWheel{
+    animation:rot 2s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+@keyframes rot{
+    0%{transform:rotateZ(0deg);}
+    100%{transform:rotateZ(360deg);}
+}
+#manBike{
+    animation: bike 1s ease infinite alternate;
+    transform-origin:bottom;
+}
+@keyframes bike{
+    0%{transform:rotateX(0deg);}
+    100%{transform:rotateX(20deg);}
+}
+#Vector_54{
+    animation:hat 1s ease infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+@keyframes hat{
+    0%{transform:rotateZ(0deg);}
+    100%{transform:rotateZ(10deg);}
+}
