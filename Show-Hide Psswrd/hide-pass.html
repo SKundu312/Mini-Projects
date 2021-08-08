@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4f6fdaa8f3.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+            font-family: 'Poppins',sans-serif;    
+        }
+        #password{
+            border: none;
+            outline:none;
+            background:transparent;
+            width: 400px;
+            height:60px;
+            font-family: 'Poppins',sans-serif;
+            font-size: 20px;
+            position: absolute;
+            top:40%;
+            left:38%;
+            padding: 0 20px;
+            border-radius: 8px;
+            box-shadow: -4px -4px 10px rgba(255,255, 255,1),
+                        inset 4px 4px 10px rgba(0,0, 0,.05),
+                        inset -4px -4px 10px rgba(255,255, 255,1),
+                        4px 4px 10px rgba(0,0, 0,.05)       
+        }
+        #inputBox{
+            display:flex;
+            align-items:center;
+            justify-content: space-between;
+        }
+        #toggle{
+            position: absolute;
+            top:45%;
+            left:67%;
+            font-size: 18px;
+            transform:translateY(-50%);
+            cursor:pointer;
+        }
+        #eyecut{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <div id="inputBox">
+        <input type="password" placeholder="Enter Password" id="password">
+          <div id="toggle" onclick="showHide()">
+            <i id="eye" class="far fa-eye"></i>
+            <i class="far fa-eye-slash" id="eyecut"></i>
+        </div>
+    </div>
+    <script rel="text/javascript" >
+     var pwd=document.getElementById('password');
+     var tog=document.getElementById('toggle');
+     function showHide(){
+         if(pwd.type==='password'){
+             pwd.setAttribute('type','text')
+             var ec=document.getElementById('eyecut').style.display="none"
+             var e=document.getElementById('eye').style.display="block"
+
+         }
+         else{
+             pwd.setAttribute('type','password')
+             var ec=document.getElementById('eyecut').style.display="block"
+             var e=document.getElementById('eye').style.display="none"
+         }
+     }
+    </script>
+</body>
+</html>
